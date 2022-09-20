@@ -1,0 +1,70 @@
+# Site settings
+title: Tsavorite
+email: hi@tsavoritegame.com
+description: >
+  An interesting game about reactions and adventuring.
+
+baseurl: "" # the subpath of your site, e.g. /blog/
+url: https://tsavoritegame.com # the base hostname & protocol for your site
+git_address: https://github.com/TsavoriteGame/tsavorite
+fb_address: 
+tw_address: https://twitter.tsavoritegame.com
+reddit_address: https://reddit.tsavoritegame.com
+discord_address: https://discord.tsavoritegame.com
+patreon_address: https://patreon.com/seiyria
+git_edit_address: https://github.com/TsavoriteGame/web/blob/master
+
+google_analytics_tracking: # "UA-102182053-2"
+
+# Build settings
+markdown: kramdown
+highlighter: rouge
+gems:
+  - jekyll-feed
+  - jekyll-redirect-from
+  - jekyll-seo-tag
+  - jekyll-sitemap
+
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - .idea/
+  - .gitignore
+  - README.md
+timezone: America/Chicago
+defaults:
+- scope:
+    path: _posts
+    type: posts
+  values:
+    layout: post
+    sectionid: blog
+
+- scope:
+    path: _docs
+    type: docs
+  values:
+    layout: docs
+    sectionid: docs
+    seo:
+      type: "WebPage"
+
+- scope:
+    path: download
+    type: download
+  values:
+    layout: default
+    sectionid: download
+    seo:
+      type: "WebPage"
+
+collections:
+  download:
+    permalink: /download
+    output: true
+  docs:
+    permalink: /:collection/:path/
+    output: true
+  posts:
+    permalink: /blog/:year/:month/:day/:title/
+    output: true
