@@ -6,7 +6,7 @@ description: >
 
 baseurl: "" # the subpath of your site, e.g. /blog/
 url: https://tsavoritegame.com # the base hostname & protocol for your site
-git_address: https://github.com/TsavoriteGame/tsavorite
+git_address: https://github.tsavoritegame.com
 fb_address: 
 tw_address: https://twitter.tsavoritegame.com
 reddit_address: https://reddit.tsavoritegame.com
